@@ -44,7 +44,7 @@ var fall = setInterval(function () {
         result.style.display = "block";
         text.innerText = `Your final score is : ${score}`;
         game.style.display = "none";
-        score = 0;
+        // score = 0;
     }
 }, 10);
 
