@@ -24,7 +24,7 @@ var fall = setInterval(function () {
     var holeTop = parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
     var hTop = 500 + holeTop;
     if (
-        birdTop > 500 ||
+        birdTop > 450 ||
         (blockLeft < 50 &&
             blockLeft > -50 &&
             (birdTop < hTop || birdTop > hTop + 100))
