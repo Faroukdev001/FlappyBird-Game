@@ -1,13 +1,25 @@
-var hole = document.getElementById("hole");
-var game = document.getElementById("game");
-var result = document.getElementById("result");
-var text = document.getElementById("text");
-var bird = document.getElementById("bird");
-var block = document.getElementById("block");
-var score = 0;
-var jumping = 0;
 
-hole.addEventListener("animationiteration", RanHole);
+// Add this function to your existing Script.js
+function startGame() {
+    // Hide the welcome screen
+    document.getElementById("welcome-screen").style.display = "none";
+
+    // Show the game
+    document.getElementById("game").style.display = "block";
+
+    // Start the game logic
+    // ... (your existing game logic)
+    var hole = document.getElementById("hole");
+    var game = document.getElementById("game");
+    var result = document.getElementById("result");
+    var text = document.getElementById("text");
+    var bird = document.getElementById("bird");
+    var block = document.getElementById("block");
+    var score = 0;
+    var jumping = 0;
+
+
+    hole.addEventListener("animationiteration", RanHole);
 
 function RanHole() {
     var random = -((Math.random() * 350) + 150);
@@ -27,7 +39,7 @@ var fall = setInterval(function () {
         birdTop > 450 ||
         (blockLeft < 50 &&
             blockLeft > -50 &&
-            (birdTop < hTop || birdTop > hTop + 100))
+            (birdTop < hTop || birdTop > hTop + 150))
     ) {
         result.style.display = "block";
         text.innerText = `Your final score is : ${score}`;
@@ -50,3 +62,10 @@ function hop() {
         jumping = 0;
     }, 100);
 }
+
+}
+
+// Display the welcome screen initially
+document.getElementById("welcome-screen").style.display = "flex";
+
+
