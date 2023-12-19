@@ -130,6 +130,7 @@ body {
 
 #character-container {
     text-align: center;
+    background-color: gold;
 }
 
 #character-img {
@@ -138,6 +139,7 @@ body {
     border: 2px solid none;
     margin-bottom: 20px;
 }
+
 
 
 /* Add styles for the score display */
