@@ -129,8 +129,20 @@ body {
 } */
 
 #character-container {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    transform: translate(-50%, -50%);
     text-align: center;
-    background-color: gold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    /* display: none; Hide initially */
 }
 
 #character-img {
