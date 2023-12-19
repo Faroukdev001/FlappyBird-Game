@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Selection Game</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #character-container {
+            text-align: center;
+        }
+
+        #character-img {
+            max-width: 200px;
+            max-height: 200px;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+        }
+
+        /* Add CSS rules for different characters */
+        #character1-selected {
+            background-color: #ffcccb; /* Light pink for character 1 */
+        }
+
+        #character2-selected {
+            background-color: #c1e1c1; /* Light green for character 2 */
+        }
+
+        #character3-selected {
+            background-color: #c9e3f5; /* Light blue for character 3 */
+        }
+    </style>
+</head>
+<body>
+    <div id="character-container">
+        <label for="character-select">Select your character:</label>
+        <select id="character-select" onchange="changeCharacter()">
+            <option value="character1">Character 1</option>
+            <option value="character2">Character 2</option>
+            <option value="character3">Character 3</option>
+        </select>
+
+        <div>
+            <img id="character-img" src="Bird.png" alt="Selected Character">
+        </div>
+    </div>
+
+    <script>
+        function changeCharacter() {
+            // Get the selected character value
+            var selectedCharacter = document.getElementById("character-select").value;
+
+            // Get the image element
+            var characterImg = document.getElementById("character-img");
+
+            // Set the source of the image based on the selected character
+            switch (selectedCharacter) {
+                case "character1":
+                    characterImg.src = "Bird2.png"; // Replace with the actual image source
+                    break;
+                case "character2":
+                    characterImg.src = "Bird3.png"; // Replace with the actual image source
+                    break;
+                case "character3":
+                    characterImg.src = "Bird4.png"; // Replace with the actual image source
+                    break;
+                default:
+                    characterImg.src = ""; // Set a default image source or leave it empty
+            }
+        }
+
+        // Initial character load
+        changeCharacter();
+    </script>
+</body>
+</html>

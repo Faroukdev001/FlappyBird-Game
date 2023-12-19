@@ -50,3 +50,49 @@ function hop() {
         jumping = 0;
     }, 100);
 }
+
+
+let deferredPrompt;
+
+    window.addEventListener('beforeinstallprompt', (event) => {
+        // Prevent the default behavior to avoid showing the browser's install prompt
+        event.preventDefault();
+
+        // Stash the event so it can be triggered later
+        deferredPrompt = event;
+
+        // Show your own custom install button or prompt
+        // For example, you can display a button with an "Add to Home Screen" message
+        showInstallButton();
+    });
+
+    function showInstallButton() {
+        // Show your custom install button and handle the user's interaction
+        // For example, display a button that triggers the installation when clicked
+        // Make sure to provide a user-friendly message
+        const installButton = document.getElementById('install-button');
+
+        if (installButton) {
+            installButton.style.display = 'block';
+
+            installButton.addEventListener('click', () => {
+                // Trigger the installation
+                deferredPrompt.prompt();
+
+                // Wait for the user to respond to the prompt
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('User accepted the install prompt');
+                    } else {
+                        console.log('User dismissed the install prompt');
+                    }
+
+                    // Reset the deferredPrompt variable
+                    deferredPrompt = null;
+
+                    // Hide the install button
+                    installButton.style.display = 'none';
+                });
+            });
+        }
+    }

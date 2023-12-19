@@ -14,22 +14,26 @@
         <button id="start-btn" onclick="startGame()">Start Game</button>
     </div>
 
-    <div id="install-button" style="display: none;">
-        <button>Add to Home Screen</button>
+    <div id="character-container">
+        <label for="character-select">Select your character:</label>
+        <select id="character-select" onchange="changeCharacter()">
+            <option value="Angry Red Bird">Angry Red Bird</option>
+            <option value="Santa Bird">Santa Bird</option>
+            <option value="Yellow Bird" selected>Yellow Bird</option>
+        </select>
     </div>
-    
 
+    <div id="score-display"></div>
+    
     <div id="instructions">
         <h3>Instructions:</h3>
         <p>Tap the screen or press any key to make the bird jump.</p>
     </div>
 
-
-
     <div id="game">
         <div id="block"></div>
         <div id="hole"></div>
-        <div id="bird"><img src="Bird.png" alt="Bird"> </div>
+        <div id="bird"><img id= "character-img" src="Bird.png" alt="Bird"> </div>
     </div>
     <div id="result">
         <h1>Game Over</h1>

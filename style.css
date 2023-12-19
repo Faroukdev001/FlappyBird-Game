@@ -127,3 +127,28 @@ body {
     margin-bottom: 10px;
     position: bottom;
 }
+
+#character-container {
+    text-align: center;
+}
+
+#character-img {
+    max-width: 200px;
+    max-height: 200px;
+    border: 2px solid none;
+    margin-bottom: 20px;
+}
+
+
+/* Add styles for the score display */
+#score-display {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
