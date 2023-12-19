@@ -17,7 +17,7 @@ function startGame() {
     // Show the game
     document.getElementById("game").style.display = "block";
     // Hide the Instructions
-    instructions.style.display = 'none';
+    // instructions.style.display = 'none';
     // Hide the character container
     document.getElementById("character-container").style.display = 'none';
     // ... Rest of the startGame() function

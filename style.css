@@ -122,11 +122,11 @@ body {
     color: seashell;
 }
 
-#instructions p {
+/* #instructions p {
     font-size: 16px;
     margin-bottom: 10px;
     position: bottom;
-}
+} */
 
 #character-container {
     text-align: center;
