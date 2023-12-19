@@ -2,7 +2,7 @@
     "name": "Flappy Bird Game",
     "short_name": "Flappy Bird",
     "description": "A fun and addictive Flappy Bird game",
-    "start_url": "/",
+    "start_url": "/FlappyBird-Game.io/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#4caf50",
