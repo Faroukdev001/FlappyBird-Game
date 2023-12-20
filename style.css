@@ -94,8 +94,8 @@ body {
 }
 
 #result{
-    height: 200px;
-    width: 500px;
+    height: 25vh;
+    width: 50vw;
     background-color: brown;
     margin: 5rem auto;
     border: 2px solid white;
@@ -138,7 +138,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(136, 165, 219, 0.8);
+    background-color: rgba(31, 96, 218, 0.8);
     color: white;
     padding: 10px;
     border-radius: 5px;
