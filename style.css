@@ -94,8 +94,8 @@ body {
 }
 
 #result{
-    height: 25vh;
-    width: 50vw;
+    height: 150px;
+    width: 280px;
     background-color: brown;
     margin: 5rem auto;
     border: 2px solid white;
